@@ -1,0 +1,120 @@
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 15vh;
+  background-color: #222933;
+
+  .nav {
+    display: flex;
+    align-items: center;
+    width: 87%;
+    justify-content: space-between;
+    position: relative;
+
+    // 🔒 Hidden checkbox
+    input[type='checkbox'] {
+      display: none;
+
+      // 🧲 Agar bosilgan bo‘lsa, menyuni och
+      &:checked~.menu {
+        right: 0;
+      }
+    }
+
+    // 🍔 Hamburger icon
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      z-index: 11;
+
+      span {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        display: block;
+        border-radius: 2px;
+        transition: 0.3s ease;
+      }
+    }
+
+    // 🔰 Logo
+    .logo {
+      display: flex;
+      align-items: center;
+      // justify-content: center;
+
+      img {
+        width: 70px;
+      }
+
+      p {
+        font-size: 35px;
+        color: white;
+
+      }
+      span {
+        width: 20px;
+        height: 2px;
+        background-color: white;
+      }
+    }
+
+    // 📄 Menyu
+    .menu {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      // .login{
+      //   border: 1px solid;
+      //   padding: 5px 10px;
+      //   border-radius: 6px;
+      // }
+
+      a {
+        color: white;
+        transition: 0.3s ease;
+        font-size: 20px;
+        cursor: pointer;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+          color: grey;
+        }
+      }
+
+      // 📱 500px dan kichik holatda yashirin bo‘ladi
+      @media screen and (max-width: 900px) {
+        flex-direction: column;
+        background-color: #222933;
+        position: fixed;
+        top: 70px;
+        right: -100%; // ❗ Yashiringan holat
+        width: 200px;
+        padding: 20px;
+        border-radius: 10px;
+        transition: right 0.3s ease;
+        z-index: 10;
+      }
+    }
+
+    // 📱 Hamburger faqat kichik ekranlarda ko‘rsatiladi
+    @media screen and (max-width: 900px) {
+      .hamburger {
+        display: flex;
+      }
+
+      .logo p {
+        font-size: 20px !important;
+
+        span {
+          font-size: 20px !important;
+        }
+      }
+    }
+  }
+}

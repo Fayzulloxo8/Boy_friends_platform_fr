@@ -1,0 +1,161 @@
+.movie-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    width: 100%;
+    padding: 50px 100px;
+    min-height: 100vh;
+
+    div {
+        background-color: #24303e;
+    }
+
+    h1 {
+        color: white;
+        border-left: 4px solid #0892c1;
+        padding: 0 20px;
+    }
+
+    .description {
+        gap: 20px;
+        margin: 20px 0;
+        display: flex;
+        padding: 20px 50px;
+        width: 80%;
+
+        img {
+            width: 250px;
+            object-fit: cover;
+            border: 2px solid grey;
+        }
+
+        .title {
+            width: 100%;
+
+            p {
+                gap: 20px;
+                margin: 20px;
+                color: white;
+                display: flex;
+                align-items: center;
+                padding: 0 15px 0 0;
+                background-color: #222933;
+                width: 100%;
+
+                span {
+                    background-color: #304155;
+                    padding: 10px 30px;
+                    font-size: 15px;
+                    width: 170px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .in-movie {
+        padding: 20px;
+        width: 80%;
+
+        video {
+            width: 100%;
+            height: 130%;
+        }
+    }
+}
+
+//
+// 🔽 Responsive: Planshetlar uchun (768px)
+//
+@media screen and (max-width: 768px) {
+    .movie-detail {
+        padding: 30px 40px;
+
+        h1 {
+            font-size: 22px;
+        }
+
+        .description {
+            flex-direction: column;
+            padding: 15px 20px;
+            width: 100%;
+            align-items: center;
+
+            img {
+                width: 200px;
+            }
+
+            .title {
+
+                // display: flex;
+                // align-items: center;
+                p {
+                    display: flex;
+                    align-items: center;
+                    //   flex-direction: column;
+                    padding: 10px;
+
+                    span {
+                        // width: 100%;
+                    }
+                }
+            }
+        }
+
+        .in-movie {
+            width: 100%;
+            //   height: 300px;
+            padding: 15px;
+            video{
+                width: 100%;
+                height: 300px;
+            }
+        }
+    }
+}
+
+//
+// 🔽 Responsive: Telefonlar uchun (500px)
+//
+@media screen and (max-width: 500px) {
+    .movie-detail {
+        padding: 20px;
+
+        h1 {
+            font-size: 20px;
+            padding: 0 10px;
+        }
+
+        .description {
+            padding: 10px;
+            gap: 15px;
+
+            img {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .title {
+                p {
+                    font-size: 14px;
+                    margin: 10px 0;
+                    gap: 10px;
+
+                    span {
+                        font-size: 13px;
+                        padding: 8px 15px;
+                    }
+                }
+            }
+        }
+
+        .in-movie {
+            padding: 10px;
+
+            video {
+                height: auto;
+            }
+        }
+    }
+}

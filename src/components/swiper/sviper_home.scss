@@ -1,0 +1,60 @@
+.premyera {
+  display: block;
+  border-left: 4px solid white;
+  position: relative;
+  left: 100px;
+  top: 70px;
+  padding: 0 10px;
+  color: white;
+  font-size: 30px;
+}
+
+.swiper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px;
+
+  .sviper_imgs {
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.02);
+      }
+    }
+  }
+}
+
+// 📱 Responsiv (mobil)
+@media screen and (max-width: 500px) {
+  .premyera {
+    font-size: 20px;
+    left: 20px;
+    top: 30px;
+  }
+
+  .swiper {
+    margin: 20px;
+
+    .sviper_imgs {
+      width: 100%;
+      height: 40vh;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+      }
+    }
+  }
+}
