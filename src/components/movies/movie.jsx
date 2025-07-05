@@ -9,7 +9,7 @@ const Movie = () => {
     const [searchTerm, setSearchTerm] = useState('')
 
     useEffect(() => {
-        fetch('http://127.0.0.1:8000/movie/')
+        fetch('https://boy-friends-platform-bk.onrender.com/movie/')
             .then(response => response.json())
             .then(data => {
                 // console.log("🎥 Movie data:", data)
@@ -17,7 +17,7 @@ const Movie = () => {
             })
             .catch(error => console.error('Movie xatosi:', error))
 
-        fetch('http://127.0.0.1:8000/category/')
+        fetch('https://boy-friends-platform-bk.onrender.com/category/')
             .then(response => response.json())
             .then(data => {
                 // console.log("📁 Category data:", data)

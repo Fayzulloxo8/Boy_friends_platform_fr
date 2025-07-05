@@ -7,7 +7,7 @@ const Nav = () => {
     const [categories, setCategories] = useState([])
 
     useEffect(() => {
-        fetch('http://127.0.0.1:8000/category/')
+        fetch('https://boy-friends-platform-bk.onrender.com/category/')
             .then(response => response.json())
             .then(data => setCategories(data))
             .catch(error => console.error('Hatolik', error))

@@ -30,7 +30,7 @@ const Login = () => {
 
         }
         try {
-            const response = await axios.post('http://127.0.0.1:8000/register/', formData);
+            const response = await axios.post('https://boy-friends-platform-bk.onrender.com/register/', formData);
             console.log('Yuborildi', response.data);
             showModal(false)
             // 🔁 inputlarni tozalash

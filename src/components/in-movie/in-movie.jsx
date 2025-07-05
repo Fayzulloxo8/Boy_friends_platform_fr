@@ -7,7 +7,7 @@ const MovieDetail = () => {
     const [movie, setMovie] = useState(null)
 
     useEffect(() => {
-        fetch(`http://127.0.0.1:8000/movie/${id}/`)
+        fetch(`https://boy-friends-platform-bk.onrender.com/movie/${id}/`)
             .then(res => res.json())
             .then(data => setMovie(data))
             .catch(err => console.error("❌ MovieDetail error:", err))

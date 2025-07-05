@@ -10,7 +10,7 @@ const MySwiper = () => {
     const [images, setImages] = useState([]);
 
     useEffect(() => {
-        fetch('http://127.0.0.1:8000/swiper/')
+        fetch('https://boy-friends-platform-bk.onrender.com/swiper/')
             .then(response => response.json())
             .then(data => setImages(data))
             .catch(error => console.error('Rasimlarni olishda xatolik:', error));
